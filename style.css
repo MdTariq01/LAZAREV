@@ -13,27 +13,62 @@ body {
 }
 
 nav {
-  align-items: center;
-  width: 100%;
-  display: flex;
-  position: fixed;
-  /* background-color: red; */
-  padding: 2vw 10.4vw;
-  justify-content: space-between;
+    position: fixed;
+    display: flex;
+    align-items: flex-start;
+    height: 12vh;
+    width: 100%;
+    padding: 2vw 10.4vw;
+    justify-content: space-between;
+    background-color: #111;
+    z-index: 10;
 }
 
-.nav-part2 ul {
-  list-style: none;
-  display: flex;
-  gap: 2vw;
+nav h1 {
+    font-size: 1.6vw;
 }
 
-.nav-part2 ul li {
-  text-transform: uppercase;
-  font-size: 0.8vw;
-  font-weight: 500;
+.nav-part2 {
+    display: flex;
+    align-items: flex-start;
+    padding: 2vh 0;
+    gap: 2vw;
+    padding: 1vh 0;
 }
 
+.nav-part2 h4 {
+    font-size: 0.8vw;
+    text-transform: uppercase;
+    font-weight: 600; 
+   margin-bottom: 2vw;
+}
+
+ .nav-part2 h5 {
+   margin-bottom: 1vw;
+   display: none;
+   overflow: hidden;
+}
+
+
+.nav-part2 h5 span {
+   font-size: 0.76vw;
+   font-weight: 400;
+   display: inline-block;
+   z-index: 10;
+   position: relative;
+   transform: translateY(25px);
+   /* opacity: 0; */
+} 
+
+.nav-bottom {
+    width: 79%;
+    background-color: #111;
+    height: 3vh;
+    position: absolute;
+    top:90%;
+    border-bottom: 1px solid #fff;
+    z-index: 9;
+}
 
 button {
   background-color: green;
@@ -54,7 +89,7 @@ button span svg {
 }
 
 #page1{
-  height: 100vh;
+  height: 90vh;
   width: 100%;
   background-color: #111;
   display: flex;
@@ -78,7 +113,7 @@ button span svg {
 }
 
 #page1 .info {
-  margin-top: 3vh;
+  margin-top: 5vh;
   text-align: center;
   font-weight: 300;
   display: flex;
@@ -90,6 +125,7 @@ button span svg {
   display: flex;
   flex-direction: row;
   font-weight: 300;
+  margin-top: 1vh;
 }
 
 #page1 .somethings p {
@@ -105,6 +141,55 @@ button span svg {
 #page1 .somethings p:nth-child(3) {
   border: none;
   padding: 5px;
+}
+
+.moving-div {
+  position: absolute;
+  margin-top: 10vh;
+  bottom: 8%;
+  overflow: hidden;
+  white-space: nowrap ;
+  padding: 1vw;
+  width: 45%;
+}
+
+.moving-div .move  {
+  display: inline-block;
+   animation: scroll 8s linear infinite;
+}
+
+.moving-div .move img {
+  height: 1vw;
+  margin: 0 1.2vw; 
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.left-blur {
+  height: 100%;
+  width: 15%;
+  background: linear-gradient(to left, transparent , #111) ;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.right-blur {
+  height: 100%;
+  width: 15%;
+  background: linear-gradient(to right, transparent , #111) ;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
 }
 
 
