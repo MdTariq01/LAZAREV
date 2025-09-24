@@ -94,8 +94,8 @@ function page3VideoPlay () {
     })
 }
 
-page3VideoPlay()
+page3VideoPlay();
 
-navAnimation()
+navAnimation();
 
-pag2Animate()
+pag2Animate();
