@@ -3,6 +3,9 @@
 Simple static site showcasing LAZAREV design studio (HTML, CSS, minimal JS + GSAP).  
 This repo contains the site source used for layout, animations and simple interactions.
 
+## SITE 
+ https://lazarev-weld.vercel.app/
+
 ## Features
 - Full‑page sections (#page1 .. #page4)
 - Nav with animated dropdown (GSAP)
