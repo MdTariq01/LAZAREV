@@ -17,7 +17,7 @@ This repo contains the site source used for layout, animations and simple intera
 
 ## Install / Run (Windows)
 1. Open project folder in VS Code:
-   c:\Users\Dell\OneDrive\PRIVATE
+   c:\Users\Dell\OneDrive\LAZAREV
 2. Quick serve options:
    - VS Code: install Live Server extension → Right click index.html → "Open with Live Server"
    - Python (from project folder):
