@@ -94,8 +94,54 @@ function page3VideoPlay () {
     })
 }
 
-page3VideoPlay();
 
-navAnimation();
+function loadingAnimation () {
+    let tl = gsap.timeline()
+tl.from("#page1", {
+  opacity: 0,
+  duration : 0.2 ,
+  delay:0.2
+  
+})
 
-pag2Animate();
+tl.from("#page1", {
+  transform : "scaleX(0.7) scaleY(0.2) translateY(80%)" , 
+  borderRadius: "150px",
+  duration: 1,
+  ease:"expo.out"
+})
+
+tl.from("#page1 h1 , #page1 p , #page1 div" , {
+    opacity : 0 , 
+    duration: 0.5 ,
+    stagger : 0.2 
+}) 
+
+tl.from("nav" , {
+    opacity : 0,
+     y: -20,
+     delay:-0.23,
+    duration: 0.42,
+    ease: "power2.out"
+})
+}
+
+
+window.addEventListener('load', function () {
+    window.scrollTo(0, 0);   // initialize after scroll reset
+    
+    loadingAnimation()
+
+    navAnimation();
+
+    pag2Animate();
+
+    page3VideoPlay();
+});
+
+// ...existing code...
+// Back to top handler (placed near other init code)
+document.getElementById('backToTop')?.addEventListener('click', function () {
+  window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+});
+// ...existing code...
